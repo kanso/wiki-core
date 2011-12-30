@@ -175,17 +175,17 @@ function loadDeps(deps) {
         }
     }
 }
-if (settings.load) {
-    // load root app
-    var tmp = {};
-    tmp[settings.name] = null;
-    loadDeps(tmp);
 
-    // load dependencies of root app
-    loadDeps(settings.dependencies);
 
-    exports._rewrites = _.flatten(exports._rewrites);
-}
+// load root app
+var tmp = {};
+tmp[settings.name] = null;
+loadDeps(tmp);
+
+// load dependencies of root app
+loadDeps(settings.dependencies);
+
+exports._rewrites = _.flatten(exports._rewrites);
 
 
 /**

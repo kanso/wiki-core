@@ -1,7 +1,6 @@
-var modules = require('kanso/modules'),
-    logger = require('kanso/logger'),
-    utils = require('kanso/utils'),
-    _ = require('underscore/underscore')._;
+var modules = require('kanso-utils/modules'),
+    utils = require('kanso-utils/utils'),
+    _ = require('underscore')._;
 
 
 var proxyFn = function (path, app, doc, props) {
@@ -48,8 +47,6 @@ var load = function (module_cache, doc, settings, name) {
             }
             else {
                 if (doc[k] && doc[k] !== app[k]) {
-                    logger.debug('Existing value', doc[k].toString());
-                    logger.debug('New value', app[k].toString());
                     throw new Error(
                         'Conflicting property values for "' + k + '"' +
                         ' caused by the "' + name + '" package'

@@ -1,7 +1,7 @@
 {
-    "name": "wiki",
+    "name": "wiki-core",
     "version": "0.0.1",
-    "description": "Basic wiki app",
+    "description": "Core code for the wiki app, must be combined with a theme",
     "load": "lib/app",
     "modules": "lib",
     "attachments": "static",
@@ -9,11 +9,6 @@
     "handlebars": {
         "all_partials": true,
         "templates": "templates"
-    },
-    "less": {
-        "compress": true,
-        "compile": "static/css/wiki.less",
-        "remove_from_attachments": true
     },
     "duality-contrib-session": {
         "signup": {
@@ -32,7 +27,6 @@
         "couchtypes": null,
         "duality-contrib-session-hb": null,
         "datelib": "0.0.1",
-        "less-precompiler": ">=1.1.5",
         "handlebars": null,
         "handlebars-helpers": "0.0.2",
         "duality-handlebars": "0.0.2",
